@@ -1,0 +1,19 @@
+name: MoreSurvival
+version: 1.0.0
+api-version: 1.16
+main: gamercoder215.moresurvival.Main
+description: Create a SMP or survival server that's more lively and active!
+author: GamerCoder215
+commands:
+  srv:
+    description: All MoreSurvival Commands
+permissions:
+  survival.*:
+    description: Gives all access to MoreSurvival Commands
+    children:
+      survival.user: true
+      survival.admin: true
+  survival.user:
+    description: Gives all access to MoreSurvival User-Friendly Commands
+    deafult: true
+  
