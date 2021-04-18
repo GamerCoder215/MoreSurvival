@@ -22,11 +22,7 @@ public class SRV implements CommandExecutor {
 		if (!(sender instanceof Player)) sender.sendMessage("Only players can execute this command.");
 		
 		Player p = (Player) sender;
-		if (args[0].length() == 0) {
-			p.sendMessage(ChatColor.GREEN + "=== MoreSurvival ===\n" + ChatColor.DARK_GREEN + "/srv help" + ChatColor.GOLD + " - " + ChatColor.GREEN + "View this page.\n");
-		} else {
-			
-		}
+		p.sendMessage(ChatColor.GREEN + "=== MoreSurvival ===\n" + ChatColor.DARK_GREEN + "/srv help" + ChatColor.GOLD + " - " + ChatColor.GREEN + "View this page.\n");
 		return false;
 	}
 	

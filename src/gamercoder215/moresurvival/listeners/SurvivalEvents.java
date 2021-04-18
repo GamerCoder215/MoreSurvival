@@ -35,4 +35,5 @@ public class SurvivalEvents implements Listener {
 		
 		e.setQuitMessage(ChatColor.translateAlternateColorCodes('&', config.getString("LeaveMessage").replaceAll("%player%", p.getDisplayName()).replaceAll("%uuid%", p.getUniqueId().toString())));
 	}
+	
 }

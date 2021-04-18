@@ -8,8 +8,8 @@ import gamercoder215.moresurvival.listeners.*;
 public class Main extends JavaPlugin {
 	
 	public void onEnable() {
-		
 		saveDefaultConfig();
+		
 		// Commands
 		new SRV(this);
 		// Events

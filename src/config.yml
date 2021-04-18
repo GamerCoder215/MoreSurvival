@@ -1,16 +1,12 @@
-# MoreSurvival
-# 
-# Created by GamerCoder215
 #
-# Welcome to the Configuration File! There will be comments
-# above each setting for you to help understand what each one
-# does. You can do /configreload inside the game to reload
-# this file.
+#
+# MoreSurvival by GamerCoder215
+#
+# v1.0.0
 
-# WelcomeMessage: The Message that greets the player. '&' codes are supported.
-# Use <player> for their player name and <uuid> for their UUID
-WelcomeMessage: &e <player> joined the server!
+# Message Used to welcome/greet players
+# Use %player% for username, %uuid% for player's UUID
+WelcomeMessage: Welcome to the Server, %player%!
 
-# LeaveMessage: The Message that is said when a player leaves. '&' codes are supported.
-# Use <player> for their player name and <uuid> for their UUID
-LeaveMessage: &e <player> left the server!
+# Message Used to say goodbye to players that leave the server
+LeaveMessage: Goodbye %player%!
