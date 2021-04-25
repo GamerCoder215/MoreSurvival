@@ -10,8 +10,9 @@ public class Main extends JavaPlugin {
 	public void onEnable() {
 		saveDefaultConfig();
 		
-		// Commands
 		new SRV(this);
+		new Wild(this);
+		// Commands
 		// Events
 		new SurvivalEvents(this);
 	}

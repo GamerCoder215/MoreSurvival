@@ -20,20 +20,19 @@ public class SurvivalEvents implements Listener {
 		Bukkit.getPluginManager().registerEvents(this, plugin);
 	}
 	
-	FileConfiguration config = plugin.getConfig();
 	
 	@EventHandler
 	public void onJoin(PlayerJoinEvent e) {
 		Player p = e.getPlayer();
 		
-		e.setJoinMessage(ChatColor.translateAlternateColorCodes('&', config.getString("WelcomeMessage").replaceAll("%player%", p.getDisplayName()).replaceAll("%uuid%", p.getUniqueId().toString())));
+		e.setJoinMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("WelcomeMessage").replaceAll("%player%", p.getDisplayName()).replaceAll("%uuid%", p.getUniqueId().toString())));
 	}
 	
 	@EventHandler
 	public void onLeave(PlayerQuitEvent e) {
 		Player p = e.getPlayer();
 		
-		e.setQuitMessage(ChatColor.translateAlternateColorCodes('&', config.getString("LeaveMessage").replaceAll("%player%", p.getDisplayName()).replaceAll("%uuid%", p.getUniqueId().toString())));
+		e.setQuitMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("LeaveMessage").replaceAll("%player%", p.getDisplayName()).replaceAll("%uuid%", p.getUniqueId().toString())));
 	}
 	
 }

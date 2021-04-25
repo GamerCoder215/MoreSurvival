@@ -4,7 +4,6 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 
 import gamercoder215.moresurvival.Main;
 
@@ -19,13 +18,12 @@ public class SRV implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if (!(sender instanceof Player)) sender.sendMessage("Only players can execute this command.");
 		
-		Player p = (Player) sender;
-		p.sendMessage(ChatColor.GREEN + "=== MoreSurvival ===\n" + ChatColor.DARK_GREEN + "/srv help" + ChatColor.GOLD + " - " + ChatColor.GREEN + "View this page.\n");
+		if (sender.hasPermission("survival.user.srv")) {
+			sender.sendMessage(ChatColor.GREEN + "=-= MoreSurvival v1.0.0 =-=\n\n" + ChatColor.DARK_GREEN + "/wild" + ChatColor.GREEN + " - Teleport into the wild!");
+		} else {
+			sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("NoPermission")));
+		}
 		return false;
 	}
-	
-	
-
 }

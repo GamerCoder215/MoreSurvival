@@ -6,15 +6,34 @@ description: Create a SMP or survival server that's more lively and active!
 author: GamerCoder215
 commands:
   srv:
-    description: All MoreSurvival Commands
-    usage: /srv
+    description: MoreSurvival command help
+  wild:
+    description: Teleport into the wild
 permissions:
   survival.*:
     description: Gives all access to MoreSurvival Commands
     children:
       survival.user: true
       survival.admin: true
+  # Admin
+  survival.admin:
+    description: Gives all access to MoreSurvival Admin Commands
+    default: op
+  # User
   survival.user:
     description: Gives all access to MoreSurvival User-Friendly Commands
-    deafult: true
+    default: true
+  survival.user.wild:
+    description: Gives access to /wild command
+    children:
+      survival.user: true
+  survival.user.srv:
+    description: Gives access to /srv command
+    children:
+      survival.user: true
+  survival.user.statistics:
+    description: Gives access to /statistics command
+    children:
+      survival.user: true
+    
   

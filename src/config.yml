@@ -4,9 +4,29 @@
 #
 # v1.0.0
 
+# Message Used when sender (console, player, etc) does not have permission
+# Use "&" for Chat Color (put spaces between)
+NoPermission: &c You do not have access to this command. Please contact an admin if you believe this is a mistake.
+
+# The world name used for /wild
+# Multiple worlds will be supported in the future
+# Change to "world_nether" for /wild to be in the nether and "world_the_end" for the end (If you haven't changed your world file names)
+
+WildWorld: world
 # Message Used to welcome/greet players
 # Use %player% for username, %uuid% for player's UUID
+# Use "&" for Chat Color
 WelcomeMessage: Welcome to the Server, %player%!
 
 # Message Used to say goodbye to players that leave the server
+# Use %player% for username, %uuid% for player's UUID
+# Use "&" for Chat Color
 LeaveMessage: Goodbye %player%!
+
+# Maximum X and Z levels used for /wild
+# Must be a number
+MaxWildLimit: 1000000
+
+# Minimum X and Z levels used for /wild
+# Must be a number
+MinWildLimit: -1000000
